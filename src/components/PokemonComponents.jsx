@@ -1,14 +1,14 @@
 import Pokemon from "../Models/Pokemon";
+import "./PokemonComponents.css";
 
 const PokemonComponents = ({ pokemon }) => {
   return (
-    <div>
-      <h1>My PokemonComponents Component</h1>
+    <div className="card">
+      <img src={pokemon.getImage} alt={pokemon.getName} />
       <div>
         <h4>
-          {pokemon.getName} {pokemon.getExperience} {pokemon.getImage}
+          {pokemon.getName} {pokemon.getExperience}
         </h4>
-        <img src={pokemon.getImage} alt={pokemon.getName} />
       </div>
     </div>
   );

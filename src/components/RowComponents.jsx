@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import PokemonComponents from "./PokemonComponents";
 import Pokemon from "../Models/Pokemon";
+import "./RowComponents.css";
 
 const RowComponents = () => {
   const [pokemonData, setPokemonData] = useState([]);
@@ -16,7 +17,7 @@ const RowComponents = () => {
           return new Pokemon(
             index + 1,
             pokemon.name,
-            index + 100,
+            index + 1,
             `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
               index + 1
             }.png`,
@@ -37,7 +38,7 @@ const RowComponents = () => {
   }
 
   return (
-    <div>
+    <div className="row-components">
       {pokemonData.map((data) => (
         <PokemonComponents key={data.getId} pokemon={data} />
       ))}

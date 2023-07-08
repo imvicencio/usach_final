@@ -3,7 +3,7 @@ import RowComponents from "./RowComponents";
 const Main = () => {
   return (
     <div>
-      <h1>My Main Component</h1>
+      <h1>Pokemon List</h1>
       <div>
         <RowComponents />
       </div>
