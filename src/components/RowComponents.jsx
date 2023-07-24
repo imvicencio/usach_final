@@ -21,13 +21,16 @@ const RowComponents = () => {
         const data = await response.json();
         const parseData = data.results.map((pokemon, index) => {
           return new Pokemon(
-            currentPage + index + 1,
+            currentPage * perPage + index + 1,
             pokemon.name,
-            currentPage + 1,
+            0,
             `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
               currentPage * perPage + index + 1
             }.png`,
-            pokemon.url
+            pokemon.url,
+            0,
+            0,
+            ""
           );
         });
         setPokemonData(parseData);
