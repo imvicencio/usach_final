@@ -7,8 +7,6 @@ const PokemonComponents = ({ pokemon }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [pokemonId, setPokemonId] = useState("");
 
-  console.log("pokemon", pokemon.getId);
-
   const openModal = (id) => {
     setPokemonId(id);
     setModalIsOpen(true);

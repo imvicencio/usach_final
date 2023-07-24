@@ -1,5 +1,5 @@
 import RowComponents from "./RowComponents";
-import './main.css';
+import './Main.css';
 const Main = () => {
   return (
     <div>

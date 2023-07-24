@@ -20,11 +20,8 @@ const customStyles = {
 const PokemonDetailsComponents = ({ isOpen, closeModal, pokemonId }) => {
   const [pokemonDetailsData, setPokemonDetailsData] = useState(0);
   useEffect(() => {
-    console.log("isOpen", isOpen);
-    console.log("id", pokemonId);
 
     if (isOpen && pokemonId) {
-      console.log("fetching data");
       const fetchData = async () => {
         try {
           const response = await fetch(
@@ -58,13 +55,12 @@ const PokemonDetailsComponents = ({ isOpen, closeModal, pokemonId }) => {
       contentLabel="Example Modal"
       style={customStyles}
     >
-      <h2>Modal Content {pokemonDetailsData.getName}</h2>
-      <p>This is the content of the modal.</p>
+      <h2>{pokemonDetailsData.getName}</h2>
       <img src={pokemonDetailsData.getImage} alt={pokemonDetailsData.getName} />
-      <p> Pokemon experience {pokemonDetailsData.getExperience} </p>
-      <p> Pokemon height {pokemonDetailsData.getHeight} </p>
-      <p> Pokemon weight {pokemonDetailsData.getWeight} </p>
-      <p> Pokemon type {pokemonDetailsData.getTypes} </p>
+      <p> Pokemon experience: {pokemonDetailsData.getExperience} </p>
+      <p> Pokemon height: {pokemonDetailsData.getHeight} </p>
+      <p> Pokemon weight: {pokemonDetailsData.getWeight} </p>
+      <p> Pokemon type: {pokemonDetailsData.getTypes} </p>
       <button onClick={closeModal}>Close Modal</button>
     </Modal>
   );
