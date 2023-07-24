@@ -1,9 +1,9 @@
 import RowComponents from "./RowComponents";
-
+import './main.css';
 const Main = () => {
   return (
     <div>
-      <h1>Pokemon List</h1>
+      <h1 className="title">Pokemon List</h1>
       <div>
         <RowComponents />
       </div>

@@ -2,7 +2,7 @@
   width: 18rem;
   margin: 1rem;
   border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(253, 0, 0, 0.968);
+  box-shadow: 0 0 1rem rgba(255, 255, 255, 255);
   transition: all 0.3s ease-in-out;
   display: flex;
   flex-wrap: wrap;
