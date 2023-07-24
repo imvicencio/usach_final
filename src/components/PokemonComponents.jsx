@@ -27,7 +27,7 @@ const PokemonComponents = ({ pokemon }) => {
       />
       <div>
         <h4>
-          {pokemon.getName} {pokemon.getExperience}
+          {pokemon.getName} {pokemon.getId}
         </h4>
       </div>
       <PokemonDetailsComponents

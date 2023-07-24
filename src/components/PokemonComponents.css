@@ -7,4 +7,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  
+}
+.card h4::first-letter{
+  text-transform: uppercase;
 }

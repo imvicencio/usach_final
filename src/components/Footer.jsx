@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div className='footer'>
       <img className='pokeball' src={pokeball} alt="pokeball" />
-      <p>Realizado por Ismael Vicencio y David Vicencio</p>
+      <p>Realizado por Ismael y David Vicencio</p>
       <img className='pokeball' src={pokeball} alt="pokeball" />
     </div>
   );
