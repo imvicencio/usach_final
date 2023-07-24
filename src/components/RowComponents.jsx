@@ -4,7 +4,6 @@ import Pokemon from "../Models/Pokemon";
 import "./RowComponents.css";
 import ReactPaginate from "react-paginate";
 
-
 const RowComponents = () => {
   const [pokemonData, setPokemonData] = useState(0);
   const [currentPage, setCurrentPage] = useState(0);
@@ -52,19 +51,18 @@ const RowComponents = () => {
         ))}
       </div>
       <div className="paginator">
-      <ReactPaginate
-        previousLabel={"previous"}
-        nextLabel={"next"}
-        breakLabel={"..."}
-        pageCount={Math.ceil(maxPokemon / perPage)}
-        marginPagesDisplayed={2}
-        pageRangeDisplayed={5}
-        onPageChange={({ selected }) => setCurrentPage(selected)}
-        containerClassName={"pagination"}
-        subContainerClassName={"pages pagination"}
-        activeClassName={"active"}
-      />
-
+        <ReactPaginate
+          previousLabel={"previous"}
+          nextLabel={"next"}
+          breakLabel={"..."}
+          pageCount={Math.ceil(maxPokemon / perPage)}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={5}
+          onPageChange={({ selected }) => setCurrentPage(selected)}
+          containerClassName={"pagination"}
+          subContainerClassName={"pages pagination"}
+          activeClassName={"active"}
+        />
       </div>
     </div>
   );
