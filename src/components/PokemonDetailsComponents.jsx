@@ -17,6 +17,7 @@ const customStyles = {
   },
 };
 
+
 const PokemonDetailsComponents = ({ isOpen, closeModal, pokemonId }) => {
   const [pokemonDetailsData, setPokemonDetailsData] = useState(0);
   useEffect(() => {
@@ -52,10 +53,13 @@ const PokemonDetailsComponents = ({ isOpen, closeModal, pokemonId }) => {
     <Modal
       isOpen={isOpen}
       onRequestClose={closeModal}
-      contentLabel="Example Modal"
       style={customStyles}
+      overlayClassName="custom-modal-overlay"
+      className="custom-modal-content" 
+      contentLabel="Pokémon Modal"
+
     >
-      <h2>{pokemonDetailsData.getName}</h2>
+      <h2 className="">{pokemonDetailsData.getName}</h2>
       <img src={pokemonDetailsData.getImage} alt={pokemonDetailsData.getName} />
       <p> Pokemon experience: {pokemonDetailsData.getExperience} </p>
       <p> Pokemon height: {pokemonDetailsData.getHeight} </p>
