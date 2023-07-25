@@ -54,10 +54,7 @@ const PokemonDetailsComponents = ({ isOpen, closeModal, pokemonId }) => {
       isOpen={isOpen}
       onRequestClose={closeModal}
       style={customStyles}
-      overlayClassName="custom-modal-overlay"
-      className="custom-modal-content" 
       contentLabel="Pokémon Modal"
-
     >
       <h2 className="">{pokemonDetailsData.getName}</h2>
       <img src={pokemonDetailsData.getImage} alt={pokemonDetailsData.getName} />
