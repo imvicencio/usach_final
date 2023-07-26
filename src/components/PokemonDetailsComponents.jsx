@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Modal from "react-modal";
 import Pokemon from "../Models/Pokemon";
-import "./PokemonDetailsComponents.css";
 
 const PokemonDetailsComponents = ({ isOpen, closeModal, pokemonId }) => {
   const [pokemonDetailsData, setPokemonDetailsData] = useState(0);
